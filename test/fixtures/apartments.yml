@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  price: 1.5
+  sqm: 1.5
+  numofbed: 
+  numofbath: 
+  picture: MyText
+
+two:
+  title: MyString
+  price: 1.5
+  sqm: 1.5
+  numofbed: 
+  numofbath: 
+  picture: MyText

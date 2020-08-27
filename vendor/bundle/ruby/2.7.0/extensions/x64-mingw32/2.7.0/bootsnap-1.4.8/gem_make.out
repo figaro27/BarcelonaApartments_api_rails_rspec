@@ -1,0 +1,16 @@
+current directory: E:/Test/appartment_api/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+C:/Ruby27-x64/bin/ruby.exe -I C:/Ruby27-x64/lib/ruby/2.7.0 -r ./siteconf20200827-13536-f15omu.rb extconf.rb
+creating Makefile
+
+current directory: E:/Test/appartment_api/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: E:/Test/appartment_api/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR="
+generating bootsnap-x64-mingw32.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: E:/Test/appartment_api/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200827-13536-3oyg83/bootsnap
