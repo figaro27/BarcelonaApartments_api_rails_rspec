@@ -21,16 +21,16 @@ class Api::ApartmentsController < Api::BaseController
     def index
       inf = Float::INFINITY
       title = params.has_key?(:title) ? params['title']: ""
-      minprice = params.has_key?(:minprice) ? params['minprice']: 0
-      maxprice = params.has_key?(:maxprice) ? params['maxprice']: inf
-      minsqm = params.has_key?(:minsqm) ? params['minsqm']: 0
-      maxsqm = params.has_key?(:maxsqm) ? params['maxsqm']: inf
-      minbed = params.has_key?(:minbed) ? params['minbed']: 0
-      maxbed = params.has_key?(:maxbed) ? params['maxbed']: inf
+      minprice = params.has_key?(:minprice) ? params['minprice'].to_f: 0
+      maxprice = params.has_key?(:maxprice) ? params['maxprice'].to_f: inf
+      minsqm = params.has_key?(:minsqm) ? params['minsqm'].to_f: 0
+      maxsqm = params.has_key?(:maxsqm) ? params['maxsqm'].to_f: inf
+      minrooms = params.has_key?(:minrooms) ? params['minrooms'].to_i: 0
+      maxrooms = params.has_key?(:maxrooms) ? params['maxrooms'].to_i: inf
 
       apartment = Apartment.where('title Like ?', "%#{title}%")
                   .where(sqm: minsqm..maxsqm)
-                  .where(numofbed: minbed..maxbed)
+                  .where(numofbed: minrooms..maxrooms)
                   .where(price: minprice..maxprice)
 
       respond_with apartment, json: apartment
